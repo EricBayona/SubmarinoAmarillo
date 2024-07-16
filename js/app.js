@@ -60,7 +60,6 @@ const cerrarMenu =(boton, overlay)=>{
     }
     btnMenus.forEach(btnMenu =>{
         btnMenu.addEventListener('click', () => {
-        console.log(btnMenu);
         overlay.remove();
         navegacion.classList.add('ocultar');
         boton.remove();
@@ -73,3 +72,45 @@ const cerrarMenu =(boton, overlay)=>{
     //     boton.remove();
     // }
 }
+
+// Botones ver Mas
+// const btnVerMas = document.querySelectorAll();
+// const parrafoVerMas = document.querySelectorAll('.parrafo-ver-mas');
+const botonesVerMas = document.querySelectorAll('.btn-ver-mas');
+
+function mostrarContenido(event) {
+    const boton = event.target;
+    const parrafo = boton.nextElementSibling;
+
+    if (parrafo) {
+        parrafo.classList.toggle('ocultar');
+        boton.textContent = parrafo.classList.contains('ocultar') ? 'Ver Más' : 'Ver Menos';
+    }
+}
+
+botonesVerMas.forEach(boton => {
+    boton.addEventListener('click', mostrarContenido);
+});
+
+// btnVerMas.forEach(btnVer => {
+//     btnVer.addEventListener('click', () => {
+//         const parrafo = btnVer.nextElementSibling;
+//         if (parrafo) {
+//             parrafo.classList.remove('ocultar');
+//             btnVer.remove();
+//             const btnVerMenos = document.createElement('button');
+//             btnVerMenos.classList.add("btn","btn-rojo");
+//             btnVerMenos.innerHTML = 'Ver Menos';
+//             const contenedorTextoSession = parrafo.closest('.contenedor-texto-sesion');
+//             if (contenedorTextoSession){
+//                 contenedorTextoSession.appendChild(btnVerMenos);
+//                 btnVerMenos.addEventListener('click',()=>{
+//                 parrafo.classList.add('ocultar');
+//                 btnVerMenos.remove();
+//                 contenedorTextoSession.appendChild(btnVer);
+//             });
+//         }
+//         btnVer.remove();
+//     }
+//     });
+// });
