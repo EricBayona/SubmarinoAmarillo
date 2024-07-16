@@ -546,6 +546,10 @@ video{
         text-align: center;
         font-size: 7rem;
     }
+    /* .propuestas div{
+        min-width: 33%;
+        height: min-content;
+    } */
 }
 .propuestas div{
     text-align: center;
