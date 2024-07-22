@@ -242,7 +242,9 @@ video{
     }
 
 }
-.texto-nosotros{
+.imagen-submarino{
+    width: 100%;
+    height: 30vh;
     background-image: url(../assets/img/submarinoAmarillo.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -255,10 +257,11 @@ video{
 .texto-nosotros, .imagenes-nosotros{
     flex:0 0 calc(50% - 1rem);
 }
-.texto-nosotros .bienvenida{
+.contenedor-nosotros .bienvenida{
     font-size: 4rem;
     color: var(--verde);
     text-align: center;
+    margin: 0;
 }
 @media(min-width:768px){
     .texto-nosotros .bienvenida{
