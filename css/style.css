@@ -126,6 +126,12 @@ img{
 .navegacion p{
     margin: 0;
 }
+.nabla {
+    font-family: "Playwrite DE VA", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
 .logo h2 {
     font-size: 3rem;
 }
@@ -418,8 +424,6 @@ video{
   
   .buttons {
     position: relative;
-    /* left: 50%;
-    transform: translateX(-50%); */
     bottom: 7rem;
     text-align: center;
   }
@@ -530,14 +534,15 @@ video{
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
 }
-/* Propuestas */
-/* .contenedor-propuestas img{
-    aspect-ratio: 1;
-} */
+/* Nuestras Propuestas */
+
 .contenedor-propuestas h2{
     text-align: center;
     font-size: 4rem;
     margin-top: 0;
+    background: linear-gradient(to left,var(--verde),var(--amarillo),var(--rojo));
+    background-clip: text;
+    color: transparent;
 }
 @media(min-width:786px){
     .propuestas{
@@ -610,9 +615,31 @@ video{
     color: var(--blanco);
     font-size: 4rem;
 }
+
+/*Horarios  */
+.horarios h2{
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(to right,var(--verde),var(--amarillo),var(--rojo));
+    background-clip: text;
+    color: transparent;
+
+}
+.horarios table{
+    font-size: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: #52b1c0;
+}
+table{
+    
+    color: var(--blanco);
+}
 /* Footer */
 footer{
     margin-top:3rem;
+    padding-top: 2rem;
     background-color: var(--oscuro);
     bottom:0;
     
